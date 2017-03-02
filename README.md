@@ -6,7 +6,7 @@ Forked from my friend's https://github.com/sop/dotfiles
 ## Installation
 Clone to home directory:
 
-    git clone https://github.com/sop/dotfiles.git ~/.dotfiles
+    git clone https://github.com/WTurunen/dotfiles.git ~/.dotfiles
 
 Install:
 
