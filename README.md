@@ -1,5 +1,7 @@
-# Sop's dotfiles
+# My dotfiles
 My personal shell environment.
+
+Forked from my friend's https://github.com/sop/dotfiles
 
 ## Installation
 Clone to home directory:
