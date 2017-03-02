@@ -56,7 +56,6 @@ fi
 
 # Aliases
 alias ll='ls -lFh'
-alias la='ls -lhAG'
 alias psl='ps -e -o user,pid,ppid,stat,start_time,%cpu,cputime,sz,rss,%mem,nlwp,args -H'
 alias phpgrep='grep -rin --include="*.php"'
 
