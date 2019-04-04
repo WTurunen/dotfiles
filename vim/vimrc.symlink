@@ -7,12 +7,10 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'nvie/vim-togglemouse'
-Plugin 'fatih/vim-go'
-Plugin 'majutsushi/tagbar'
-if !has("win32unix") && 
-	\ (v:version > 704 || v:version == 704 && has("patch143"))
-    Plugin 'Valloric/YouCompleteMe'
+if has('patch-7.4-1689')
+    Plugin 'fatih/vim-go'
 endif
+Plugin 'majutsushi/tagbar'
 Plugin 'elzr/vim-json'
 call vundle#end()
 
@@ -34,11 +32,31 @@ set ai
 
 " Tab width
 set tabstop=4
+set softtabstop=4
 set shiftwidth=4
+set expandtab
+set smarttab
+
+" listchars
+set listchars=eol:¶,tab:>·,trail:·
 
 " Enable 256 color mode
 set t_Co=256
 colorscheme molokai
+
+" Highlight character that span over 80th column
+highlight OverLength ctermbg=88 ctermfg=7
+let s:OverLengthHighlightState = 0
+function! ToggleOverLengthHighlight()
+    if s:OverLengthHighlightState == 0
+        let s:OverLengthHighlightState = 1
+        match OverLength /\%81v.\+/
+    else
+        let s:OverLengthHighlightState = 0
+        match none
+    endif
+endfunction
+nnoremap <C-h> :call ToggleOverLengthHighlight()<CR>
 
 " Write file by first invoking sudo
 cnoremap w!! w !sudo tee > /dev/null %
