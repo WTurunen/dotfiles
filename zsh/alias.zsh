@@ -13,6 +13,7 @@ fi
 alias la='ls -lFha'
 alias ll='ls -lFh'
 alias phpgrep='grep -rin --include="*.php"'
+alias pogrep='grep -rin --include="*.po"'
 alias psl='ps -e -o user,pid,ppid,stat,start_time,%cpu,cputime,sz,rss,%mem,nlwp,args -H'
 
 # execute last typed command with sudo
