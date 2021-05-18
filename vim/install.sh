@@ -23,4 +23,10 @@ pushd colors > /dev/null
     ln -s $DIR/molokai.vim
 popd > /dev/null
 
+# add link to molokai theme
+pushd colors > /dev/null
+[[ -e "gruvbox.vim" ]] ||
+    ln -s $DIR/gruvbox.vim
+popd > /dev/null
+
 exit 0
