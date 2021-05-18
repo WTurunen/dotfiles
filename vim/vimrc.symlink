@@ -42,7 +42,7 @@ set listchars=eol:¶,tab:>·,trail:·
 
 " Enable 256 color mode
 set t_Co=256
-colorscheme molokai
+colorscheme gruvbox
 
 " Highlight character that span over 80th column
 highlight OverLength ctermbg=88 ctermfg=7
